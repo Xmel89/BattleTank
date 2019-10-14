@@ -7,11 +7,6 @@ addr = (host, port)
 
 Data = 256
 
-def int_to_bytes(x: int) -> bytes:
-    return x
-
-def int_from_bytes(xbytes: bytes) -> int:
-    return int.from_bytes(xbytes, 'big')
 
 while True:
     tcp_socket = socket(AF_INET, SOCK_STREAM)
