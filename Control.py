@@ -11,7 +11,7 @@ turm_l_d = False
 turn_up = False
 turn_down = False
 shoot = None
-def controll(name):
+def control(name):
     global support
     global accel_but_d
     global accel_but_d_minus

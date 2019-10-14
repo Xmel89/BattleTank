@@ -1,21 +1,21 @@
-import math, Controll, time
+import math, Control, time
 
 def phisics(name, nameTurm, Xmark, Shell):
     rotation = 0
     a = 0.05
     p = 0.05*name.v
-    controll = Controll.controll(name)
-    accel_but_d = controll[0]
-    accel_but_d_minus = controll[1]
-    caterpillar_r_f = controll[2]
-    caterpillar_l_f = controll[3]
-    caterpillar_r_u = controll[4]
-    caterpillar_l_u = controll[5]
-    turm_r_d = controll[6]
-    turm_l_d = controll[7]
-    turn_up = controll [8]
-    turn_down = controll [9]
-    shoot = controll [10]
+    control = Control.control(name)
+    accel_but_d = control[0]
+    accel_but_d_minus = control[1]
+    caterpillar_r_f = control[2]
+    caterpillar_l_f = control[3]
+    caterpillar_r_u = control[4]
+    caterpillar_l_u = control[5]
+    turm_r_d = control[6]
+    turm_l_d = control[7]
+    turn_up = control [8]
+    turn_down = control [9]
+    shoot = control [10]
     if name.angle >= 360:
         name.angle -= 360
     if name.angle < 0:
