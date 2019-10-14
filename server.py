@@ -1,11 +1,11 @@
 from socket import *
-# from Start import PzParam as a
+import json
 
 
 port = 9090
 addr = ('', port)
 
-Data = 25
+Data = [25, 89]
 tcp_socket = socket(AF_INET, SOCK_STREAM)
 
 #bind - связывает адрес и порт с сокетом
@@ -20,11 +20,11 @@ while True:
     conn, addr = tcp_socket.accept()
 
     #recv - получает сообщение TCP
-    response = conn.recv(1024)
+    response = conn.recv(4096)
     response = int.from_bytes(response, byteorder='big')
     toClientData = Data
     print(response)
-    toClientData = (toClientData).to_bytes(100, byteorder='big')
+    toClientData = json.dumps(toClientData, ensure_ascii=False).encode()
     conn.send(toClientData)
     conn.close()
 

@@ -1,5 +1,5 @@
 from socket import *
-import sys
+import json
 
 host = 'localhost'
 port = 9090
@@ -21,9 +21,8 @@ while True:
 
     toServeData = toServeData.to_bytes(100, byteorder='big')
     tcp_socket.send(toServeData)
-    response = tcp_socket.recv(1024)
+    response = tcp_socket.recv(4096)
 
-
-    response = int.from_bytes(response, byteorder='big')
+    response = json.loads(response.decode())
     print(response)
 

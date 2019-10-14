@@ -5,7 +5,7 @@ import Render, Phisics
 wi = 1200
 hi = 800
 screen2 = pygame.display.set_mode((wi, hi))
-pygame.display.set_caption('Battle tank')            #name window
+pygame.display.set_caption('Battle tank server')            #name window
 loc = os.getcwd()+'/img/'
 global Pz5
 Pz5 = Render.Render(loc+'Pz-5corpM.png', 50, 50, 300, screen2, 0)
